@@ -1,0 +1,498 @@
+@import 'colors';
+@import 'animate';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	scroll-padding-top: 81.6px;
+}
+
+body {
+	position: relative;
+	font-family: 'Urbanist', sans-serif;
+	background-color: $background-color;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+	color: $white-color;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: $hover-color;
+}
+
+span {
+	color: $hover-color;
+}
+
+.shadow-bg {
+	background-color: rgba(12, 31, 39, 0.7);
+}
+
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	z-index: 1;
+
+	.container {
+		.navbar-brand {
+			color: $white-color;
+		}
+	} //^ styl dla logo, ze względu na specyficzność css musiałem to zagnieździć w ten sposób, bo inaczej po klknięciu kolor był czarny
+
+	.navbar-brand:hover {
+		color: $hover-color;
+	}
+
+	.fa-bars {
+		padding: 10px;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.navbar-nav {
+		.nav-link:hover {
+			color: $hover-color;
+		}
+
+		.nav-link {
+			color: $white-color;
+		}
+		.nav-link.active {
+			color: $hover-color;
+		}
+	} //^ tu dla linków, podbnie jak z Logo, dlatego to tak wygląda
+
+	.navbar-toggler:focus,
+	.navbar-toggler:active,
+	.navbar-toggler-icon:focus {
+		border: solid $white-color;
+		box-shadow: none;
+	} //^ tu dla hamburger icon, podbnie jak z Logo, dlatego to tak wygląda
+
+	.navbar-toggler {
+		i {
+			color: $white-color;
+		}
+	} //^ tu dla hamburger icon, podbnie jak z Logo, dlatego to tak wygląda
+}
+
+header {
+	color: $white-color;
+
+	h1 {
+		text-transform: uppercase;
+		font-size: 30px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('/img/hero\ grafika\ mała.jpg');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -10;
+	}
+
+	.hero-text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 5;
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+		color: $white-color;
+		border-color: $white-color;
+	}
+
+	.btn-outline-light:hover {
+		color: $hover-color;
+		background-color: $white-color;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		bottom: 20px;
+		font-size: 30px;
+		color: $white-color;
+	}
+}
+
+.about-us {
+	p {
+		color: $white-color;
+		i {
+			margin-top: 20px;
+			font-size: 30px;
+		}
+	}
+
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+
+	.aboutus-hover:hover {
+		p {
+			color: $hover-color;
+		}
+	}
+}
+
+.aboutus-hero {
+	position: relative;
+	background-image: url('/img/hero\ grafika\ 2\ mała.jpg');
+	background-position: center;
+	background-size: cover;
+	color: $white-color;
+	z-index: 0;
+
+	.aboutus-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -10;
+	}
+
+	.aboutus-hero-item {
+		margin: 10px 0;
+		i {
+			font-size: 36px;
+		}
+		.aboutus-hero-title {
+			font-size: 24px;
+		}
+	}
+}
+
+.featured {
+	.carousel-item {
+		position: relative;
+		height: 600px;
+	}
+
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 40px 40px;
+		color: $white-color;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+
+	.carousel-control-prev-icon {
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fffbd7'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+	}
+
+	.carousel-control-next-icon {
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fffbd7'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+	}
+
+	.carousel-indicators [data-bs-target] {
+		background-color: $hover-color;
+	}
+
+	.card {
+		border: none;
+		background-color: $hover-color;
+		color: $white-color;
+	}
+
+	.card-group > .card:not(:first-child),
+	.card-group > .card:not(:last-child) {
+		border-radius: 0;
+	} //style bootstrapa dla kard, specyficzoność stąd te odwołania
+
+	.card-group > .card:not(:last-child) .card-header,
+	.card-group > .card:not(:last-child) .card-img-top,
+	.card-group > .card:not(:first-child) .card-header,
+	.card-group > .card:not(:first-child) .card-img-top {
+		border-radius: 0;
+	} //style bootstrapa dla kard, specyficzoność stąd te odwołania
+}
+
+.experiences {
+	color: $white-color;
+
+	.experience-box {
+		background-color: $background-color2;
+		transition: transform 0.3s linear;
+		border-radius: 0.375rem;
+		box-shadow: 10px 10px 10px $hover-color;
+
+		h3 {
+			color: $hover-color;
+		}
+
+		ul {
+			text-align: left;
+		}
+
+		button {
+			margin-top: 12px;
+			text-transform: uppercase;
+			color: $white-color;
+			border-color: $white-color;
+			background-color: transparent;
+
+			a {
+				color: $white-color;
+			}
+		}
+
+		button:hover {
+			color: $hover-color;
+			background-color: $white-color;
+
+			a {
+				color: $hover-color;
+			}
+		}
+
+		hr {
+			color: $hover-color;
+			transform: scaleY(5);
+		}
+	}
+
+	.experience-box:hover {
+		transform: scale(1.06);
+	}
+
+	p {
+		text-align: center;
+	}
+
+	.experience-tag {
+		font-weight: bold;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.experience-info {
+	margin-top: 16px;
+}
+
+.portfolio {
+	position: relative;
+	background-image: url('/img/hero\ img\ 4\ big.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+
+	.shadow-bg-2 {
+		top: 0;
+		position: absolute;
+		background-color: rgba(12, 31, 39, 0.7);
+		height: 100%;
+		width: 100%;
+		z-index: -5;
+	}
+
+	.card {
+		transition: transform 0.3s;
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+		background-color: $background-color2;
+		transition: transform 0.3s linear;
+		border-radius: 0.375rem;
+		box-shadow: 10px 10px 10px $hover-color;
+		color: $white-color;
+
+		.card-footer {
+			border-top: $hover-color solid;
+			i {
+				padding: 10px;
+				color: $white-color;
+			}
+
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.card-body {
+		height: 260px;
+	}
+
+	.card-title {
+		margin-bottom: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.card:hover {
+		transform: scale(0.96);
+	}
+}
+
+.achievements {
+	color: $white-color;
+	i {
+		padding: 10px;
+		font-size: 48px;
+		text-shadow: 3px 3px 5px $hover-color;
+	}
+
+	.achievements-list {
+		padding: 20px 0;
+	}
+
+	.achievements-number {
+		font-size: 22px;
+	}
+	.achievements-text {
+		font-size: 13px;
+		text-transform: uppercase;
+	}
+}
+
+.contact {
+	position: relative;
+	background-image: url('/img/hero\ img\ 4\ big.jpg');
+	background-position: bottom;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 0;
+
+	h2 {
+		color: $white-color;
+	}
+
+	.contact-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(12, 31, 39, 0.7);
+		z-index: -5;
+	}
+
+	.contact-us {
+		display: flex;
+		align-items: center;
+		color: $white-color;
+
+		.contact-item {
+			margin: 30px 0;
+
+			h3 {
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+
+			.social-media {
+				font-size: 26px;
+
+				a {
+					padding: 10px;
+					color: $white-color;
+					text-decoration: none;
+				}
+
+				a:hover {
+					color: $hover-color;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	color: $white-color;
+}
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 72px;
+	}
+	.aboutus-hero {
+		background-image: url('/img/hero\ grafika\ 2\ duża.jpg');
+	}
+
+	.prices {
+		.price-info {
+			font-size: 18px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url('/img/hero\ grafika\ duża.jpg');
+		}
+	}
+}
