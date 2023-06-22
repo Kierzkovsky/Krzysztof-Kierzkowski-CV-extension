@@ -104,7 +104,7 @@ header {
 	.hero-img {
 		position: relative;
 		height: 100vh;
-		background-image: url('/img/hero\ grafika\ mała.jpg');
+		background-image: url('img/hero\ grafika\ mała.jpg');
 		background-position: center;
 		background-size: cover;
 		background-attachment: fixed;
@@ -178,7 +178,7 @@ header {
 
 .aboutus-hero {
 	position: relative;
-	background-image: url('/img/hero\ grafika\ 2\ mała.jpg');
+	background-image: url('img/hero\ grafika\ 2\ mała.jpg');
 	background-position: center;
 	background-size: cover;
 	color: $white-color;
@@ -321,7 +321,7 @@ header {
 
 .portfolio {
 	position: relative;
-	background-image: url('/img/hero\ img\ 4\ big.jpg');
+	background-image: url('img/hero\ img\ 4\ big.jpg');
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -399,7 +399,7 @@ header {
 
 .contact {
 	position: relative;
-	background-image: url('/img/hero\ img\ 4\ big.jpg');
+	background-image: url('img/hero\ img\ 4\ big.jpg');
 	background-position: bottom;
 	background-attachment: fixed;
 	background-size: cover;
@@ -479,7 +479,7 @@ footer {
 		scroll-padding-top: 72px;
 	}
 	.aboutus-hero {
-		background-image: url('/img/hero\ grafika\ 2\ duża.jpg');
+		background-image: url('img/hero\ grafika\ 2\ duża.jpg');
 	}
 
 	.prices {
@@ -492,7 +492,7 @@ footer {
 @media (min-width: 1200px) {
 	header {
 		.hero-img {
-			background-image: url('/img/hero\ grafika\ duża.jpg');
+			background-image: url('img/hero\ grafika\ duża.jpg');
 		}
 	}
 }
