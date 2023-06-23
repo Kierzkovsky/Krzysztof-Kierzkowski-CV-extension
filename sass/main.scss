@@ -444,6 +444,12 @@ header {
 				a:hover {
 					color: $hover-color;
 				}
+
+				.resume {
+					color: $white-color;
+					text-decoration: none;
+					font-weight: bold;
+				}
 			}
 		}
 	}
